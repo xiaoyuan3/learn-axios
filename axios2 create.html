@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    axios.defaults.baseURL = 'http://localhost:3000'
+
+    // 使用axios发请求
+    axios({
+      url: '/posts' // 请求3000
+    })
+
+    // axios({
+    //   url: '/xxx' // 请求4000
+    // })
+
+    const instance = axios.create({
+      baseURL: 'http://localhost:4000'
+    })
+
+    // 使用instance发请求
+    // instance({
+    //   url: '/xxx'  // 请求4000
+    // })
+    instance.get('/xxx')
+  </script>
+</body>
+
+</html>
